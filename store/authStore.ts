@@ -5,7 +5,15 @@ import axios from 'axios';
 import { BASE_URL } from '../utils';
 import { IUser } from '../types';
 
-const authStore = (set: any) => ({
+interface AuthState {
+  userProfile: IUser | null;
+  allUsers: IUser[] | [];
+  addUser: (user: IUser) => void;
+  removeUser: () => void;
+  fetchAllUsers: () => Promise<void>;
+}
+
+const authStore = (set: any): AuthState => ({
   userProfile: null,
   allUsers: [],
 
