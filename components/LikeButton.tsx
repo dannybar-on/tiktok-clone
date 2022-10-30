@@ -18,7 +18,7 @@ const LikeButton: NextPage<IProps> = ({
   handleDislike,
 }) => {
   const [alreadyLiked, setAlreadyLiked] = useState(false);
-  const { userProfile }: any = useAuthStore();
+  const { userProfile } = useAuthStore();
   let filterLikes = likes?.filter(
     (item: any) => item._ref === userProfile?._id
   );

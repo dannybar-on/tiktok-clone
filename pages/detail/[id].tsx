@@ -20,7 +20,7 @@ interface IProps {
 }
 
 const Detail = ({ postDetails }: IProps) => {
-  const [post, setPost] = useState(postDetails);
+  const [post, setPost] = useState<IVideo>(postDetails);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isVideoMuted, setIsVideoMuted] = useState<boolean>(false);
   const [isPostingComment, setIsPostingComment] = useState<boolean>(false);
